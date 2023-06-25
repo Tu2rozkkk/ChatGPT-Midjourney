@@ -15,7 +15,7 @@ FROM base AS builder
 
 RUN apk update && apk add --no-cache git
 
-ENV OPENAI_API_KEY="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"
+ENV OPENAI_API_KEY="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"
 ENV MIDJOURNEY_PROXY_URL=""
 ENV CODE=""
 
@@ -31,7 +31,7 @@ WORKDIR /app
 RUN apk add proxychains-ng
 
 ENV PROXY_URL=""
-ENV OPENAI_API_KEY="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"
+ENV OPENAI_API_KEY="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"
 ENV MIDJOURNEY_PROXY_URL=""
 ENV CODE=""
 
