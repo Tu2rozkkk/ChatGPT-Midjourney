@@ -15,8 +15,8 @@ FROM base AS builder
 
 RUN apk update && apk add --no-cache git
 
-ENV OPENAI_API_KEY="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"
-ENV MIDJOURNEY_PROXY_URL=""
+ENV OPENAI_API_KEY=""
+ENV MIDJOURNEY_PROXY_URL="http://tu2.zeabur.app:7890"
 ENV CODE=""
 
 WORKDIR /app
@@ -31,8 +31,8 @@ WORKDIR /app
 RUN apk add proxychains-ng
 
 ENV PROXY_URL=""
-ENV OPENAI_API_KEY="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"
-ENV MIDJOURNEY_PROXY_URL=""
+ENV OPENAI_API_KEY=""
+ENV MIDJOURNEY_PROXY_URL="http://tu2.zeabur.app:7890"
 ENV CODE=""
 
 COPY --from=builder /app/public ./public
